@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-image: url('/assets/aistudio/image_cd694d28.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f1f5f9;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes trenchBloom {
+  0% {
+    transform: scale(0.18) translate(50px, 50px);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1.02) translate(0, 0);
+    opacity: 0.98;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes trenchRippleShockwave {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@keyframes trenchSparkleTwinkle {
+  0%, 100% {
+    transform: scale(0.75);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+.animate-trench-bloom {
+  animation: trenchBloom 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-trench-ripple {
+  animation: trenchRippleShockwave 0.7s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+}
+
+.animate-sparkle-twinkle {
+  animation: trenchSparkleTwinkle 2s ease-in-out infinite;
+}
+
+@keyframes trenchFullScreenBloom {
+  0% {
+    clip-path: circle(32px at calc(100% - 48px) calc(100% - 48px));
+    opacity: 0.85;
+  }
+  100% {
+    clip-path: circle(170% at calc(100% - 48px) calc(100% - 48px));
+    opacity: 1;
+  }
+}
+
+.animate-fullscreen-bloom {
+  animation: trenchFullScreenBloom 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+

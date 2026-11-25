@@ -1,0 +1,11 @@
+{
+  "name": "Remix TRENCH — Delivery \u0026 Tailors Platform",
+  "description": "Dual-interface platform connecting customers, bespoke tailors, and delivery \u0026 measurement partners for clothing stitching, video-guided measurements, and alteration logistics.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
